@@ -105,12 +105,11 @@ public class MyStepdefs {
         driver.findElement(By.id("com.android.calculator2:id/eq")).click();
     }
 
-    @Then("^I can see the result is {string}$")
+    @Then("I can see the result is {string}")
     public void iCanSeeTheResultIs(String result) {
         // Get result from result text box and verify if it matches the number which was defined as the variable
         String resultCalculator = driver.findElement(By.id("com.android.calculator2:id/result")).getText();
         Assert.assertEquals(resultCalculator, result);
-//        Assert.assertTrue(resultCalculator.equals(result));
     }
 
     public static Activity appSettings (String appName){
