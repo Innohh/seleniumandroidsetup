@@ -1,0 +1,23 @@
+Feature: Performing automated tests on Selendroid test app
+
+  Scenario: After clicking the EN button, a popup should appear
+    Given the app: "selendroid" is active
+    When I click the EN button
+    Then A popup with the text "This will end the activity" is visible
+
+  Scenario: Filling in a form
+    Given the app: "selendroid" is active
+    When I type "Hallo ik ben een tester" in a form field
+    Then I see the text "Hallo ik ben een tester" on the screen
+
+    Scenario: Filling in a request form
+      Given the app: "selendroid" is active
+      When I click on the formButton
+      And I fill in "user1" in the "UsernameField"
+      And I fill in "aaaaaa@gmail.com" in the "emailField"
+      And I fill in "123456" in the "passwordField"
+      And I fill in "Peter Boulton" in the "nameField"
+#      And I click on the registerButton
+#      Then I see all my info on the screen
+
+
